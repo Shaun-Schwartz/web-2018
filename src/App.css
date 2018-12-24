@@ -1,8 +1,11 @@
 body {
-  background-color: #282c34;
+  --main-background-color: #282c34;
+  --secondary-background-color: #4a4c51;
+  --main-border-color: darkgrey;
   --button-color: #008CBD;
   --modal-width: 500px;
   --modal-side-margin: 75px;
+  background-color: var(--main-background-color);
 }
 
 
@@ -41,7 +44,7 @@ body {
 .ReactModal__Overlay--after-open{
     opacity: 1;
     border: none !important;
-    background-color: #4a4c51 !important;
+    background-color: var(--secondary-background-color) !important;
 }
 
 .ReactModal__Overlay--before-close{
@@ -105,11 +108,29 @@ body {
   font-family: sans-serif;
 }
 
-.fade-out {
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
+.cookies-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cookies-close {
+  padding-right: 5px;
+}
+
+.cookies {
+  display: block;
+  background-color: var(--secondary-background-color);
+  width: 90%;
+  position: fixed;
+  bottom: 0;
+  height: 90px;
+  border-top: 1px solid var(--main-border-color);
+  border-left: 1px solid var(--main-border-color);
+  border-right: 1px solid var(--main-border-color);
+  padding: 10px 10px 0px 10px;
+}
+
+.cookies-small{
+  font-size: 12px;
+  line-height: 14px;
 }

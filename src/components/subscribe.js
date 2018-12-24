@@ -1,29 +1,32 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-
+import Cookies from './cookies'
 
 Modal.setAppElement('#root')
-class Enter extends Component {
+class Subscribe extends Component {
   constructor() {
     super();
 
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: true,
+      showCookies: false
     };
     this.closeModal = this.closeModal.bind(this);
   }
 
-  closeModal() {
+  closeModal(){
     this.setState({modalIsOpen: false});
+    setTimeout(() => this.setState({showCookies: true}), 2000)
   }
+
   render() {
+    console.log(this.props);
     return (
       <div>
         <Modal
-          closeTimeoutMS={2000}
+          closeTimeoutMS={1000}
           className="popup-modal"
-          isOpen={this.props.openModel}
+          isOpen={this.props.openModel && this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           shouldCloseOnOverlayClick={false}
@@ -34,14 +37,17 @@ class Enter extends Component {
             ref={subtitle => this.subtitle = subtitle}>
             Subscribe
           </h2>
-          <form>
             <input className="email-input" type="email"></input>
-            <button className="subscribe-button"onClick={this.closeModal}>Submit</button>
-          </form>
+            <button
+              className="subscribe-button"
+              onClick={this.closeModal}>
+              Submit
+            </button>
         </Modal>
+        <Cookies show={this.state.showCookies}/>
       </div>
     );
   }
 }
 
-export default Enter;
+export default Subscribe;

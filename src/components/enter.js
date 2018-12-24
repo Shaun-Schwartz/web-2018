@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import Subscribe from './subscribe';
 
@@ -23,7 +22,9 @@ class Enter extends Component {
     this.setState({modalIsOpen: false});
     setTimeout(() => this.setState({subscribeModalIsOpen: true}), 2000)
   }
+
   render() {
+    console.log(this.props);
     return (
       <div>
         <Modal
