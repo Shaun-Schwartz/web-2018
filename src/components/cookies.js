@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import Location from './location'
 
 class Cookies extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {showCookies: true, showLocation: false};
+  }
+
+  closeCookies = () => {
+    this.setState({showCookies: false, showLocation: true})
   }
 
   render() {
-    if (this.props.show) {
+    if (this.props.show && this.state.showCookies) {
       return (
         <div className="cookies">
           <div className="cookies-header">
@@ -15,7 +20,7 @@ class Cookies extends Component {
               This site uses cookies
             </div>
             <div className="cookies-close">
-              <button>close</button>
+              <button onClick={this.closeCookies}>close</button>
             </div>
           </div>
           <div className="cookies-small">
@@ -25,7 +30,7 @@ class Cookies extends Component {
       );
     } else {
       return (
-        <div></div>
+        <Location show={this.state.showLocation} />
       )
     }
   }
