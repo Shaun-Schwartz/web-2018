@@ -35,7 +35,7 @@ class Enter extends Component {
             Subscribe
           </h2>
           <form>
-            <input class="email-input" type="email"></input>
+            <input className="email-input" type="email"></input>
             <button className="subscribe-button"onClick={this.closeModal}>Submit</button>
           </form>
         </Modal>
