@@ -20,7 +20,8 @@ class Enter extends Component {
   }
 
   closeModal() {
-    this.setState({modalIsOpen: false, subscribeModalIsOpen: true});
+    this.setState({modalIsOpen: false});
+    setTimeout(() => this.setState({subscribeModalIsOpen: true}), 2000)
   }
   render() {
     return (
