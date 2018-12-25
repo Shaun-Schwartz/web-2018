@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Thasadith');
+
 body {
   --main-background-color: #282c34;
   --secondary-background-color: #4a4c51;
@@ -6,7 +8,9 @@ body {
   --modal-width: 500px;
   --modal-height: 300px;
   --modal-side-margin: 75px;
+  --thasadith: 'Thasadith', sans-serif;
   background-color: var(--main-background-color);
+  font-family: 'Thasadith', sans-serif;
 }
 
 .ReactModal__Overlay {
@@ -46,7 +50,6 @@ body {
   width: 350px;
   height: 70px;
   font-size: 40px;
-  font-family: sans-serif;
   border: none;
 }
 
@@ -57,7 +60,6 @@ body {
   width: 350px;
   height: 70px;
   font-size: 40px;
-  font-family: sans-serif;
   border: none;
 }
 
@@ -70,14 +72,12 @@ body {
   width: 348px;
   height: 40px;
   font-size: 20px;
-  font-family: sans-serif;
   border: none;
 }
 
 .modal-subtitle {
   text-align: center;
   font-size: 45px;
-  font-family: sans-serif;
 }
 
 .cookies {
@@ -134,10 +134,38 @@ body {
   width: 150px;
   height: 70px;
   font-size: 40px;
-  font-family: sans-serif;
   border: 1px solid black;
 }
 
 .location-icon {
   height: 25px;
+}
+
+.set-homepage {
+  width: var(--modal-width);
+  height: var(--modal-height);
+  background-color: var(--secondary-background-color);
+  margin-left: 60%;
+  margin-right: var(--modal-side-margin);
+}
+
+.set-homepage-text {
+  padding-top: 80px;
+  margin-left: var(--modal-side-margin)
+}
+
+.set-homepage-buttons {
+  padding-top: 25px;
+  margin-left: var(--modal-side-margin);
+  margin-right: var(--modal-side-margin);
+  display: flex;
+  justify-content: space-between;
+}
+
+.set-homepage-button {
+  background-color: var(--secondary-background-color);
+  width: 150px;
+  height: 70px;
+  font-size: 40px;
+  border: 1px solid black;
 }

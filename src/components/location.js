@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import SetHomepage from './setHomepage'
 
-class Cookies extends Component {
+class Location extends Component {
   constructor() {
     super();
-    this.state = {showLocation: true, showSocialMedia: false};
+    this.state = {showLocation: true, showSetHomepage: false};
   }
 
   closeLocation = () => {
-    this.setState({showLocation: false, showSocialMedia: true})
+    this.setState({showLocation: false, showSetHomepage: true})
   }
 
   render() {
@@ -17,7 +18,8 @@ class Cookies extends Component {
           <div className="location-text">
             <h3>This website wants to:</h3>
             <br/>
-            <img className="location-icon" src="location.png"/>Know your location
+            <img className="location-icon" src="location.png" alt="location-icon"/>
+            Know your location
           </div>
           <div className="location-buttons">
             <button
@@ -35,10 +37,10 @@ class Cookies extends Component {
       );
     } else {
       return (
-        null
+        <SetHomepage show={this.state.showSetHomepage} />
       )
     }
   }
 }
 
-export default Cookies;
+export default Location;

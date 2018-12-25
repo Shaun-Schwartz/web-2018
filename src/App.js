@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import FadeIn from 'react-fade-in';
 
 import Subscribe from './components/subscribe'
 import Enter from './components/enter'
