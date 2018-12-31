@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Thasadith');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
   --main-background-color: #282c34;
@@ -8,9 +8,11 @@ body {
   --modal-width: 500px;
   --modal-height: 300px;
   --modal-side-margin: 75px;
-  --thasadith: 'Thasadith', sans-serif;
+  --alert-width: 350px;
+  --alert-height: 210px;
+  --alert-side-margin: 30px;
   background-color: var(--main-background-color);
-  font-family: 'Thasadith', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ReactModal__Overlay {
@@ -108,64 +110,70 @@ body {
   line-height: 14px;
 }
 
-.location {
-  width: var(--modal-width);
-  height: var(--modal-height);
+.alert {
+  width: var(--alert-width);
+  height: var(--alert-height);
   background-color: var(--secondary-background-color);
-  margin-left: var(--modal-side-margin);
-  margin-right: var(--modal-side-margin);
+  position: relative;
 }
 
-.location-text {
-  padding-top: 30px;
-  margin-left: var(--modal-side-margin)
+.alert-text {
+  padding-top: 20px;
+  margin-left: var(--alert-side-margin);
+  margin-right: var(--alert-side-margin);
 }
 
-.location-buttons {
-  padding-top: 25px;
-  margin-left: var(--modal-side-margin);
-  margin-right: var(--modal-side-margin);
+.alert-buttons {
   display: flex;
-  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.location-button {
+.alert-button {
   background-color: var(--secondary-background-color);
-  width: 150px;
-  height: 70px;
-  font-size: 40px;
-  border: 1px solid black;
+  width: 50%;
+  height: 60px;
+  font-size: 26px;
+  border: none;
+}
+
+.alert-button-left {
+  border-top: 2px solid var(--main-background-color);
+  border-right: 2px solid var(--main-background-color);
+}
+
+.alert-button-right {
+  border-top: 2px solid var(--main-background-color);
+}
+
+.location-alert {
+  margin-left: var(--modal-side-margin);
+  margin-right: var(--alert-side-margin);
+}
+
+.location-alert-text {
+  /* padding-top: 20px; */
+}
+
+.location-alert-buttons {
+  padding-top: 30px;
+  display: flex;
 }
 
 .location-icon {
   height: 25px;
 }
 
-.set-homepage {
-  width: var(--modal-width);
-  height: var(--modal-height);
-  background-color: var(--secondary-background-color);
-  margin-left: 60%;
+.set-homepage-alert {
+  margin-left: auto;
   margin-right: var(--modal-side-margin);
 }
 
-.set-homepage-text {
-  padding-top: 80px;
-  margin-left: var(--modal-side-margin)
+.set-homepage-alert-text {
 }
 
-.set-homepage-buttons {
+.set-homepage-alert-buttons {
   padding-top: 25px;
-  margin-left: var(--modal-side-margin);
-  margin-right: var(--modal-side-margin);
   display: flex;
-  justify-content: space-between;
-}
-
-.set-homepage-button {
-  background-color: var(--secondary-background-color);
-  width: 150px;
-  height: 70px;
-  font-size: 40px;
-  border: 1px solid black;
 }

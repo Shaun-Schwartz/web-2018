@@ -14,19 +14,19 @@ class SetHomepage extends Component {
   render() {
     if (this.props.show && this.state.showSetHomepage) {
       return (
-        <div className="set-homepage">
-          <div className="set-homepage-text">
+        <div className="alert set-homepage-alert">
+          <div className="alert-text">
             <h3>Are you sure you want to change your homepage?</h3>
           </div>
-          <div className="set-homepage-buttons">
+          <div className="alert-buttons set-homepage-alert-buttons">
             <button
               onClick={this.close}
-                className="set-homepage-button">
+                className="alert-button-left alert-button">
                 Cancel
               </button>
             <button
               onClick={this.close}
-              className="set-homepage-button">
+              className="alert-button-right alert-button">
               Confirm
             </button>
           </div>

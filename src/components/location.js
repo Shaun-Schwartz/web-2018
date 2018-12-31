@@ -14,22 +14,21 @@ class Location extends Component {
   render() {
     if (this.props.show && this.state.showLocation) {
       return (
-        <div className="location">
-          <div className="location-text">
+        <div className="alert location-alert">
+          <div className="alert-text">
             <h3>This website wants to:</h3>
-            <br/>
             <img className="location-icon" src="location.png" alt="location-icon"/>
             Know your location
           </div>
-          <div className="location-buttons">
+          <div className="alert-buttons">
             <button
               onClick={this.closeLocation}
-                className="location-button">
+                className="alert-button alert-button-left">
                 Allow
               </button>
             <button
               onClick={this.closeLocation}
-              className="location-button">
+              className="alert-button alert-button-right">
               Block
             </button>
           </div>
