@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Subscribe from './components/subscribe'
-import Enter from './components/enter'
 import Cookies from './components/cookies'
+import DownloadApp from './components/downloadApp'
+import Enter from './components/enter'
+import Location from './components/location'
+import SetHomepage from './components/setHomepage'
+import Subscribe from './components/subscribe'
 
 class App extends Component {
 

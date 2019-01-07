@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import Subscribe from './subscribe';
 
-Modal.setAppElement('#root')
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');
 class Enter extends Component {
   constructor() {
     super();
@@ -24,7 +24,6 @@ class Enter extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <Modal
